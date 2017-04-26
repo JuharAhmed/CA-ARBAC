@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="@color/wallet_dim_foreground_disabled_holo_dark"
+    android:id="@+id/ca_arbac">
+
+    <TextView
+        android:text="CA_ARBAC allows you to create new roles, assign and modify existing roles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textColorHighlight="@color/abc_primary_text_disable_only_material_light"
+        android:labelFor="@+id/roleCreateButtonFrameLayout"/>
+
+
+      <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+         android:layout_centerHorizontal="true"
+          android:id="@+id/roleCreateButtonFrameLayout"
+          android:layout_marginTop="100dp"
+          android:background="@color/wallet_holo_blue_light">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Role"
+            android:onClick="buttonHandleMethod"
+            android:id="@+id/createRoleButton"
+            android:layout_below="@+id/textView"
+            android:layout_gravity="center"
+            android:background="@android:color/holo_blue_dark"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/roleAssignButtonFrameLayout"
+        android:layout_below="@+id/roleCreateButtonFrameLayout"
+        android:layout_marginTop="40dp"
+        android:background="@color/wallet_holo_blue_light">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Assign Role"
+            android:id="@+id/assignRoleButton"
+            android:onClick="buttonHandleMethod"
+            android:layout_below="@+id/createRoleButton"
+            android:layout_gravity="center"
+             android:background="@android:color/holo_blue_dark"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/roleModifyButtonFrameLayout"
+        android:layout_below="@+id/roleAssignButtonFrameLayout"
+        android:layout_marginTop="40dp"
+        android:background="@color/wallet_holo_blue_light">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modify Role"
+            android:id="@+id/modifyRoleButton"
+            android:onClick="buttonHandleMethod"
+            android:layout_below="@+id/assignRoleButton"
+            android:layout_gravity="center"
+            android:background="@android:color/holo_blue_dark"/>
+    </FrameLayout>
+
+
+</RelativeLayout>

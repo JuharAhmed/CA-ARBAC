@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="tr.edu.iyte.ca_arbac.RoleCreator"
+    android:orientation="vertical">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/wallet_holo_blue_light">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Enter Role Name"
+        android:id="@+id/roleNameTextField"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/accent_material_dark"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|top">
+        android:background="@color/accent_material_dark"/>
+    </GridLayout>
+</FrameLayout>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/accent_material_dark"
+    android:layout_marginTop="10dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Select Permissions For Your Role"
+        android:id="@+id/selectPermissions"
+        android:layout_below="@+id/roleNameTextField"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:enabled="false"
+        android:textColor="@android:color/black"
+
+        />
+
+</FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/wallet_highlighted_text_holo_light"
+        android:orientation="vertical">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/android:list"
+            android:headerDividersEnabled="false"
+            android:clickable="false"
+            android:choiceMode="multipleChoice"
+            style="@style/Base.TextAppearance.AppCompat.Menu"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/selectPermissions"
+            android:background="#f4ffff"
+            android:textColor="#ddb9ff"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create"
+            android:id="@+id/saveRole"
+            android:onClick="saveRoleToDatabase"
+            android:textColor="#000000"
+            android:layout_below="@+id/permissionList"
+            android:layout_weight="0"
+            android:background="@color/wallet_highlighted_text_holo_light"/>
+    </LinearLayout>
+
+
+</LinearLayout>

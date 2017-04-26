@@ -1,0 +1,74 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width= "wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/searchLayout">
+
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationName"
+        android:hint="Enter the Place to Search" />
+    <Button
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchButton"
+        android:onClick="onSearch"
+        android:text="Search" />
+
+</LinearLayout>
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="477dp"
+        android:layout_below="@id/searchLayout"
+        android:id="@+id/mapLayout"
+        android:orientation="horizontal"
+     android:weightSum="1">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="250dp"
+    android:layout_height="match_parent" android:id="@+id/map"
+    tools:context="tr.edu.iyte.ca_arbac.LocationSelector"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_weight="1.01" />
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:orientation="vertical">
+
+         <Button
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/zoomIn"
+             android:onClick="zoom"
+             android:layout_below="@+id/zoomOut"
+             android:text="zoomIn" />
+
+         <Button
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:onClick="zoom"
+             android:id="@+id/zoomOut"
+             android:text="zoomOut" />
+
+         <Button
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:onClick="returnSelectedLocation"
+             android:id="@+id/saveLocationButton"
+             android:text="setLocation"
+             />
+
+     </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
