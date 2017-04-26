@@ -5,7 +5,11 @@ call it from the application.
 
 The ASM Simulator is a library application that can make a call to CA-ARBAC on behalf of the requesting application.The ASM Simulator first contacts the CA-ARBAC. If access is denied by CA-ARBAC, the ASM Simulator returns security exception message to the application. If access is allowed by CA-ARBAC, the ASM Simulator then contacts Android system and fetches the reference to the requested resource from Android system
    
-A test application that contains ASM Simulator libraray is also available for you in the test folder. You can use this test application if you don't want to develope your own application. 
+Two test applications that already contain ASM Simulator libraray are also available for you in the following links 
+You can use these two test applications if you don't want to develope your own application.
+https://github.com/juharahmed/MyMessengertest 
+https://github.com/juharahmed/LocationGetter
+ 
 
 Note: Don't forget to create roles and assign at least one role to the test application before you try to run the test application on CA-ARBAC. 
 
