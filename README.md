@@ -7,7 +7,7 @@ The ASM Simulator is a library application that can make a call to CA-ARBAC on b
    
 Two test applications that already contain ASM Simulator libraray are also available for you in the following links 
 You can use these two test applications if you don't want to develope your own application.
-https://github.com/juharahmed/MyMessengertest  
+https://github.com/juharahmed/MyMessenger
 https://github.com/juharahmed/LocationGetter
  
 Note: You should restart your device the first time you install CA-ARBAC as CA-ARBAC contains a background service that is started 
